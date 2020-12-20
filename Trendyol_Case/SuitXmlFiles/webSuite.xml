@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Web Suite" preserve-order="true" parallel="tests" thread-count="2">
+
+    <test name="Chrome Tests">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="tests.TestNGRunner">
+            <methods>
+                <include name="butikLinksAndResponseCodes"/>
+                <include name="imgLinksLoadTimeAndResponseCodes"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+
+ <test name="Firefox test">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="tests.TestNGRunner">
+            <methods>
+                <include name="butikLinksAndResponseCodes"/>
+                <include name="imgLinksLoadTimeAndResponseCodes"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>

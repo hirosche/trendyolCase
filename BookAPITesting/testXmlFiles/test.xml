@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="test" preserve-order="true" parallel="tests" thread-count="1">
+    <test name="test">
+        <classes>
+            <class name="TestRunner">
+                <methods>
+                    <include name="verifyThatTheAPIStartsWithAnEmptyStore"/>
+                    <include name="verifyThatAuthorIsRequiredFields"/>
+                    <include name="verifyThatTitleIsRequiredFields"/>
+                    <include name="verifyThatAuthorCannotBeEmpty"/>
+                    <include name="verifyThatTitleCannotBeEmpty"/>
+                    <include name="verifyThatTheIdFieldIsReadOnly"/>
+                    <include name="verifyThatYouCanCreateANewBookViaPUT"/>
+                    <include name="verifyThatYouCannotCreateADuplicateBbook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
